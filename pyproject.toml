@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schema-gate"
+version = "0.1.0"
+description = "Fail-closed Schema-Boundary Contract Gate for AI coding agents: blocks silent shared-column concept overload, foreign-writer mutations, and append-only ledger overwrites across Python, TypeScript/Prisma/Drizzle, SQL migrations, and runtime DB-API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  {name = "Tao Shi (Zhurong)"}
+]
+keywords = ["ai-coding-agents", "schema-boundary", "static-analysis", "mcp", "claude-code", "sql", "prisma", "drizzle", "architecture-governance"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Database",
+]
+
+[project.urls]
+Homepage = "https://github.com/iannil/schema-gate"
+Repository = "https://github.com/iannil/schema-gate"
+Paper = "https://zhurongshuo.com/en/papers/schema-boundary-gate/"
+"Zenodo Formal Proofs & Dataset" = "https://doi.org/10.5281/zenodo.24459632"
+
+[project.scripts]
+schema-gate = "schema_gate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

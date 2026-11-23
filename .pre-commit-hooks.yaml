@@ -1,0 +1,7 @@
+- id: schema-gate
+  name: SchemaGate (Data Boundary Contract Check)
+  description: Fail-closed static check for G1-G5 schema boundaries (imports, concept decompression, single-writer ownership, append-only facts, domain closure).
+  entry: schema-gate check --contract schema-contract.json
+  language: python
+  types_or: [python, ts, tsx, javascript, sql]
+  require_serial: false

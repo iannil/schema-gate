@@ -1,0 +1,42 @@
+{
+  "contract_id": "ecommerce-schema-v1",
+  "columns": [
+    {
+      "table": "users",
+      "column": "status",
+      "owner_module": "auth",
+      "concept": "account_lifecycle",
+      "data_class": "MutableState",
+      "allowed_tags": ["active", "suspended", "deleted"],
+      "description": "Account lifecycle owned exclusively by auth service"
+    },
+    {
+      "table": "user_risk_flags",
+      "column": "risk_state",
+      "owner_module": "risk",
+      "concept": "risk_control",
+      "data_class": "MutableState",
+      "allowed_tags": ["clear", "risk_locked"],
+      "description": "Decompressed fraud/risk lock table owned by risk service"
+    },
+    {
+      "table": "payment_intents",
+      "column": "intent_state",
+      "owner_module": "billing",
+      "concept": "payment_intent_history",
+      "data_class": "AppendOnlyFact",
+      "allowed_tags": ["created", "submitted", "reconciled"],
+      "description": "Immutable append-only intent ledger; never UPDATE or DELETE in place"
+    }
+  ],
+  "forbidden_imports": [
+    ["risk", "auth"],
+    ["risk", "billing"],
+    ["billing", "auth"]
+  ],
+  "module_globs": {
+    "auth": ["**/auth/**", "**/auth_*.py", "**/auth_*.ts"],
+    "risk": ["**/risk/**", "**/risk_*.py", "**/risk_*.ts"],
+    "billing": ["**/billing/**", "**/billing_*.py", "**/billing_*.ts"]
+  }
+}
