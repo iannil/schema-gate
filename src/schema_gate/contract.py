@@ -256,7 +256,7 @@ class CheckReport:
                     "tool": {
                         "driver": {
                             "name": "SchemaGate",
-                            "version": "0.1.0",
+                            "version": "0.1.1",
                             "informationUri": "https://github.com/iannil/schema-gate",
                             "rules": [
                                 {"id": k, "shortDescription": {"text": desc}}

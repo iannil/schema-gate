@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/schema-gate
+      url: https://pypi.org/p/schema-boundary-gate
     permissions:
       id-token: write
       contents: read

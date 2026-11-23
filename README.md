@@ -1,7 +1,7 @@
 # schema-gate
 
 [![CI](https://github.com/iannil/schema-gate/actions/workflows/ci.yml/badge.svg)](https://github.com/iannil/schema-gate/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/schema-gate.svg)](https://pypi.org/project/schema-gate/)
+[![PyPI](https://img.shields.io/pypi/v/schema-boundary-gate.svg)](https://pypi.org/project/schema-boundary-gate/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0%20(stdlib%20only)-brightgreen.svg)](pyproject.toml)
@@ -58,7 +58,7 @@ Formally verified in **Isabelle/HOL 2026** (session `RC_SchemaBoundary`, zero `s
 Zero third-party dependencies (Python 3.10+ stdlib only):
 
 ```bash
-pip install schema-gate
+pip install schema-boundary-gate
 ```
 
 Or from source:

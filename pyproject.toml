@@ -3,8 +3,8 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "schema-gate"
-version = "0.1.0"
+name = "schema-boundary-gate"
+version = "0.1.1"
 description = "Fail-closed Schema-Boundary Contract Gate for AI coding agents: blocks silent shared-column concept overload, foreign-writer mutations, and append-only ledger overwrites across Python, TypeScript/Prisma/Drizzle, SQL migrations, and runtime DB-API."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,6 +31,7 @@ Paper = "https://zhurongshuo.com/en/papers/schema-boundary-gate/"
 
 [project.scripts]
 schema-gate = "schema_gate.cli:main"
+schema-boundary-gate = "schema_gate.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
